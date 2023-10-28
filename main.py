@@ -9,7 +9,7 @@ def click_at_coordinates(x, y, interval=0.0):
     time.sleep(interval)
 
 if __name__ == "__main__":
-    time.sleep(10)
+    time.sleep(5)
     with open(coordinates_file, 'r') as file:
         data = json.load(file)
         repeat = data['repeat']
@@ -19,6 +19,6 @@ if __name__ == "__main__":
                 x = coordinate['x']
                 y = coordinate['y']
                 try:
-                    click_at_coordinates(x, y, 2)
+                    click_at_coordinates(x, y, 1.5)
                 except Exception as e:
                     print(f"Error: {e}")
