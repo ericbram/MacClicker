@@ -9,6 +9,7 @@ def click_at_coordinates(x, y, interval=0.0):
     time.sleep(interval)
 
 if __name__ == "__main__":
+    time.sleep(10)
     with open(coordinates_file, 'r') as file:
         data = json.load(file)
         repeat = data['repeat']
